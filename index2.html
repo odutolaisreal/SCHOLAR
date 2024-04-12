@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLearningPoint</title>
+
+    <!-- Basic style -->
+    <style>
+        .img-container {
+            margin: 20px auto;
+            width: 40%;
+        }
+
+        .btn-container {
+            text-align: center;
+        }
+
+        img {
+            height: 400px;
+            display: block;
+            margin: auto;
+            padding-bottom: 20px;
+        }
+
+        button {
+            outline: none;
+            padding: 12px;
+            border: none;
+            background-color: rgb(25, 121, 211);
+            border-radius: 8px;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+
+
+</head>
+
+<body>
+    <!-- HTML code for next and previous button -->
+    <div class="img-container">
+        <img src="https://codelearningpoint.com/uploads/1627415311.jpg" alt="" class="imageTag">
+        <div class="btn-container">
+            <button onclick="previous()">Previous</button>
+            <button onclick="next()">Next</button>
+        </div>
+    </div>
+
+    <!-- Javascript code for next and previous button -->
+    <script>
+        let images = [
+            'https://codelearningpoint.com/uploads/1627415311.jpg',
+            'https://codelearningpoint.com/uploads/1627415323.jpg',
+            'https://codelearningpoint.com/uploads/1627415302.jpg'
+        ];
+        let imageTag = document.querySelector('.imageTag');
+        let i = 0;
+
+
+        function next() {
+            if (i >= images.length - 1) {
+                return false;
+            }
+            i++;
+            imageTag.setAttribute('src', images[i]);
+        }
+        function previous() {
+            if (i <= 0) {
+                return false;
+            }
+            i--;
+            imageTag.setAttribute('src', images[i]);
+        }
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css">
+    <title>SCHOLAR</title>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navv">
+            <div class="logo">
+                <h1>SCHOLAR</h1>
+                <div class="p"></div>
+            </div>
+            <div class="search-input">
+
+                <input type="text" placeholder="Type Something" id='searchText' name="searchKeyword"
+                    onkeypress="handle" />
+                <i class="fa fa-search"></i>
+
+            </div>
+            <ul class="nav">
+                <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                <li class="scroll-to-section"><a href="#services">Services</a></li>
+                <li class="scroll-to-section"><a href="#courses">Courses</a></li>
+                <li class="scroll-to-section"><a href="#team">Team</a></li>
+                <li class="scroll-to-section"><a href="#events">Events</a></li>
+                <li class="scroll-to-section"><a href="#contact">Register Now!</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="scholar_overlay">
+        <div class="header-text">
+            <span class="category">Our Courses</span>
+            <h2>With Scholar Teachers, Everything Is Easier</h2>
+            <p>Scholar is free CSS template designed by TemplateMo for online educational related websites. This layout
+                is based on the famous Bootstrap v5.3.0 framework.</p>
+            <div class="buttons">
+                <div class="main-button">
+                    <a href="#">Request Demo</a>
+                </div>
+                <div class="icon-button">
+                    <a href="#"><i class="fa fa-play"></i> What's Scholar?</a>
+                </div>
+            </div>
+        </div>
+        <div class="header-text" id="ht" style="display: none;">
+            <span class="category">Best Result</span>
+            <h2>Get the best result out of your effort</h2>
+            <p>You are allowed to use this template for any educational or commercial purpose. You are not allowed to
+                re-distribute the template ZIP file on any other website.</p>
+            <div class="buttons">
+                <div class="main-button">
+                    <a href="#">Request Demo</a>
+                </div>
+                <div class="icon-button">
+                    <a href="#"><i class="fa fa-play"></i> What's the best result?</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="header-text" id="ht2" style="display: none;">
+        <span class="category">Online Learning</span>
+        <h2>Online Learning helps you save the time</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod temporious incididunt ut labore et
+            dolore magna aliqua suspendisse.</p>
+        <div class="buttons">
+            <div class="main-button">
+                <a href="#">Request Demo</a>
+            </div>
+            <div class="icon-button">
+                <a href="#"><i class="fa fa-play"></i> What's Online Course?</a>
+            </div>
+        </div>
+    </div>
+    <div class="arrow">
+        <div class="prev_arrow" onclick="previous()"><i class="fa-solid fa-angle-left"></i></i></div>
+        <div class="next_arrow" onclick="next()"><i class="fa-solid fa-angle-right"></i></div>
+    </div>
+    <div class="service">
+        <div class="service-item">
+            <div class="icon">
+                <img src="./images/service-01.png" alt="online degrees">
+            </div>
+            <div class="main-content">
+                <h4>Online Degrees</h4>
+                <p>Whenever you need free templates in HTML CSS, you just remember TemplateMo website.</p>
+                <div class="main_button">
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="icon">
+                <img src="./images/service-02.png" alt="online degrees">
+            </div>
+            <div class="main-content">
+                <h4>Short Courses</h4>
+                <p>You can browse free templates based on different tags such as digital marketing, etc.</p>
+                <div class="main_button">
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+        <div class="service-item">
+            <div class="icon">
+                <img src="./images/service-03.png" alt="online degrees">
+            </div>
+            <div class="main-content">
+                <h4>Web Experts</h4>
+                <p>You can start learning HTML CSS by modifying free templates from our website too.</p>
+                <div class="main_button">
+                    <a href="#">Read More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div style="display: flex;margin-bottom: 30ex;">
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button"> Where shall we begin?
+                    </button>
+                </h2>
+                <div id="collapseOne">
+                    <div class="accordion-body">
+                        Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor
+                        incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt
+                        ut
+                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" onclick="close">Where shall we begin?</button>
+                </h2>
+                <div id="collapseOne">
+                    <div class="accordion-body">
+                        Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor
+                        incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt
+                        ut
+                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button"> Where shall we begin?
+                    </button>
+                </h2>
+                <div id="collapseOne">
+                    <div class="accordion-body">
+                        Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor
+                        incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt
+                        ut
+                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button"> Where shall we begin?
+                    </button>
+                </h2>
+                <div id="collapseOne">
+                    <div class="accordion-body">
+                        Dolor <strong>almesit amet</strong>, consectetur adipiscing elit, sed doesn't eiusmod tempor
+                        incididunt ut labore consectetur <code>adipiscing</code> elit, sed do eiusmod tempor incididunt
+                        ut
+                        labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="about-heading">
+            <h6>About Us</h6>
+            <h2>What make us the best academy online?</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore
+                magna aliqua. Quis ipsum suspendisse ultrices gravid risus commodo.</p>
+            <div class="main-button">
+                <a href="#">Discover More</a>
+            </div>
+        </div>
+    </div>
+    <div class="course_txt">
+        <h2>Latest courses</h2>
+        <h1>Latest courses</h1>
+    </div>
+    <div class="course_filter">
+        <ul>
+            <li>show All</li>
+            <li>webdesign</li>
+            <li>Development</li>
+            <li>wordpress</li>
+
+        </ul>
+    </div>
+    <div class="both_course">
+        <div class="first_course">
+            <div class="events_item">
+                <div class="thumb">
+                    <a href="#"><img src="./images/course-01.jpg" alt=""></a>
+                    <span class="category1">Webdesign</span>
+                    <span class="price">
+                        <h6><em>$</em>160</h6>
+                    </span>
+                </div>
+                <div class="down-content">
+                    <span class="author">Stella Blair</span>
+                    <h4>Learn Web Design</h4>
+                </div>
+            </div>
+            <div class="events_item">
+                <div class="thumb">
+                    <a href="#"><img src="./images/course-02.jpg" alt=""></a>
+                    <span class="category1">Development</span>
+                    <span class="price">
+                        <h6><em>$</em>340</h6>
+                    </span>
+                </div>
+                <div class="down-content">
+                    <span class="author">cindy walker</span>
+                    <h4>Web Development tips</h4>
+                </div>
+            </div>
+            <div class="events_item">
+                <div class="thumb">
+                    <a href="#"><img src="./images/course-03.jpg" alt=""></a>
+                    <span class="category1">wordpress</span>
+                    <span class="price">
+                        <h6><em>$</em>640</h6>
+                    </span>
+                </div>
+                <div class="down-content">
+                    <span class="author">David Hutson</span>
+                    <h4>Latest Web Trends</h4>
+                </div>
+            </div>
+        </div>
+        <div class="second_course">
+            <div class="events_item">
+                <div class="thumb">
+                    <a href="#"><img src="./images/course-04.jpg" alt=""></a>
+                    <span class="category1">Development</span>
+                    <span class="price">
+                        <h6><em>$</em>450</h6>
+                    </span>
+                </div>
+                <div class="down-content">
+                    <span class="author">Stella Blair</span>
+                    <h4>Online learning Steps</h4>
+                </div>
+            </div>
+            <div class="events_item">
+                <div class="thumb">
+                    <a href="#"><img src="./images/course-05.jpg" alt=""></a>
+                    <span class="category1">wordpress</span>
+                    <span class="price">
+                        <h6><em>$</em>320</h6>
+                    </span>
+                </div>
+                <div class="down-content">
+                    <span class="author">sophie Rose</span>
+                    <h4>Be a wordpress Master</h4>
+                </div>
+            </div>
+            <div class="events_item">
+                <div class="thumb">
+                    <a href="#"><img src="./images/course-06.jpg" alt=""></a>
+                    <span class="category1">WebDesign</span>
+                    <span class="price">
+                        <h6><em>$</em>240</h6>
+                    </span>
+                </div>
+                <div class="down-content">
+                    <span class="author">David Hutson</span>
+                    <h4>Full Stack Developer</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="achievement">
+        <div class="one">
+            <h2>150+</h2>
+            <h4>Happy students</h4>
+        </div>
+        <div class="one">
+            <h2>804+</h2>
+            <h4>courses Hour</h4>
+        </div>
+        <div class="one">
+            <h2>50+</h2>
+            <h4>Employed students</h4>
+        </div>
+        <div class="one">
+            <h2>15+</h2>
+            <h4>years experience</h4>
+        </div>
+
+    </div>
+    <div class="teams">
+        <div class="member_detail">
+            <img src="./images/member-01.jpg" alt="" srcset="">
+            <h2>UX Teacher</h2>
+            <h4>Sophia Rose</h4>
+            <ul class="teams-icons">
+                <li><a href="www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="member_detail">
+            <img src="./images/member-02.jpg" alt="" srcset="">
+            <h2>Graphic Teacher</h2>
+            <h4>Cidny walker</h4>
+            <ul class="teams-icons">
+                <li><a href="www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="member_detail">
+            <img src="./images/member-03.jpg" alt="" srcset="">
+            <h2>Full stack Master</h2>
+            <h4>David Hutson</h4>
+            <ul class="teams-icons">
+                <li><a href="www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+        <div class="member_detail">
+            <img src="./images/member-04.jpg" alt="" srcset="">
+            <h2>Digital Animator</h2>
+            <h4>Stella Blair</h4>
+            <ul class="teams-icons">
+                <li><a href="www.facebook.com"><i class="fab fa-facebook"></i></a></li>
+                <li><a href="www.twitter.com"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="testimonials">
+        <div class="testimonial1">
+            <p>“Please tell your friends or collegues about TemplateMo website. Anyone can access the website to
+                download free templates. Thank you for visiting.”</p>
+            <div class="authors" style="display: flex;">
+                <img src="./images/testimonial-author.jpg" alt="">
+                <h4>Full Stack Master <br><span>Claude David</span></h4>
+            </div>
+        </div>
+        <div class="wtsau">
+            <div class="item2">
+                <h3>Testimonial</h3>
+                <h1>What They Say About Us?</h1>
+                <p>You can search free CSS templates on Google using different keywords such as templatemo portfolio,
+                    templatemo gallery, templatemo blue color, etc.</p>
+            </div>
+        </div>
+    </div>
+    <div class="events_txt">
+        <h3>SCHEDULE</h3>
+        <H1>Upcoming Events</H1>
+    </div>
+    <div class="main_events">
+        <div class="events">
+            <h3>WEB DESIGN</h3>
+            <h1>UI Best Practices</h1>
+            <ul>
+                <li>
+                    <span>Date:</span>
+                    <h6>16 Feb 2036</h6>
+                </li>
+                <li>
+                    <span>Duration:</span>
+                    <h6>22 Hours</h6>
+                </li>
+                <li>
+                    <span>Price:</span>
+                    <h6>$120</h6>
+                </li>
+            </ul>
+            <a href="#"><i class="fa fa-angle-right"></i></a>
+        </div>
+        <img src="./images/event-01.jpg" alt="">
+        <div class="events" style="top: -15ex;position: relative;">
+            <h3>FRONT END</h3>
+            <h1>New Design Trend</h1>
+            <ul>
+                <li>
+                    <span>Date:</span>
+                    <h6>24 Feb 2036</h6>
+                </li>
+                <li>
+                    <span>Duration:</span>
+                    <h6>30 Hours</h6>
+                </li>
+                <li>
+                    <span>Price:</span>
+                    <h6>$320</h6>
+                </li>
+            </ul>
+            <a href="#"><i class="fa fa-angle-right"></i></a>
+        </div>
+        <img src="./images/event-02.jpg" alt="" style="top: -44ex;position: relative;">
+        <div class="events" style="top: -29ex;position: relative;">
+            <h3>FULL STACK</h3>
+            <h1>Web Programming</h1>
+            <ul>
+                <li>
+                    <span>Date:</span>
+                    <h6>12 Mar 2036</h6>
+                </li>
+                <li>
+                    <span>Duration:</span>
+                    <h6>48 Hours</h6>
+                </li>
+                <li>
+                    <span>Price:</span>
+                    <h6>$440</h6>
+                </li>
+            </ul>
+            <a href="#"><i class="fa fa-angle-right"></i></a>
+        </div>
+        <img src="./images/event-03.jpg" alt="" style="top: -58ex;position: relative;">
+    </div>
+    <div style="display: flex;">
+        <div class="contact_details">
+            <div class="content">
+                <h6>Contact Us</h6>
+                <h2>Feel free to contact us anytime</h2>
+                <p>Thank you for choosing our templates. We provide you best CSS templates at absolutely 100% free of
+                    charge. You may support us by sharing our website to your friends.</p>
+            </div>
+            <div class="offer">
+                <span class="offers">off<br><em>50%</em></span>
+                <h6>Valide: <em>24 April 2036</em></h6>
+                <h4>Special Offer <em>50%</em> OFF!</h4>
+                <a href="#"><i class="fa fa-angle-right"></i></a>
+            </div>
+        </div>
+        <div class="contact_message">
+            <form id="contact-form" action="" method="post">
+                <div class="contact_list">
+                    <div class="name_comtact">
+                        <fieldset>
+                            <input type="name" name="name" id="name" placeholder="Your Name..." autocomplete="on"
+                                required>
+                        </fieldset>
+                    </div>
+                    <div class="email_contact">
+                        <fieldset>
+                            <input type="text" name="email" id="email" pattern="[^ @]*@[^ @]*"
+                                placeholder="Your E-mail..." required="">
+                        </fieldset>
+                    </div>
+                    <div class="message_contact">
+                        <fieldset>
+                            <textarea name="message" id="message" placeholder="Your Message"></textarea>
+                        </fieldset>
+                    </div>
+                    <div>
+                        <button type="submit" id="form-submit" class="main_button smn">Send Message Now</button>
+                    </div>
+                    <img src="./images/contact-dec-02.png" alt="" srcset="">
+                </div>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <div class="footer_txt">
+            <p>Copyright © 2036 Scholar Organization. All rights reserved. &nbsp;&nbsp;&nbsp; Design: <a href="#"
+                    rel="nofollow" target="_blank">TemplateMo</a></p>
+        </div>
+    </footer>
+    <script src="./scholar.js"></script>
+</body>
+
+</html>
